@@ -1,0 +1,128 @@
+.page {
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    min-height: 100vh;
+}
+
+.card {
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: white;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #1f2937;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    color: #111827;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 4px 0 20px 0;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.input-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.input-hint {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+.metric {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+}
+
+.metric:last-child {
+    border-bottom: none;
+}
+
+.metric-label {
+    color: #6b7280;
+}
+
+.metric-value {
+    font-weight: 600;
+    color: #111827;
+}
+
+.status-ready {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.status-running {
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.status-completed {
+    color: #059669;
+    font-weight: 500;
+}
+
+.status-failed {
+    color: #dc2626;
+    font-weight: 500;
+}
+
+.error-text {
+    color: #dc2626;
+    font-size: 13px;
+    margin: 2px 0;
+}
+
+.warning-text {
+    color: #d97706;
+    font-size: 13px;
+    margin: 2px 0;
+}
+
+.run-button {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.run-button:hover {
+    background: #1d4ed8;
+}
+
+.run-button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
