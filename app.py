@@ -204,16 +204,23 @@ def _summary_panel() -> dbc.Card:
     )
 
 
-def _tabs_section() -> dbc.Card:
-    time_series_tab = dbc.Tab(
-        dcc.Graph(
-            id="time-series-graph",
-            figure=empty_figure("Run a simulation to see time-series"),
-        ),
-        label="Time Series",
-        tab_id="tab-ts",
+def _time_series_card() -> dbc.Card:
+    return dbc.Card(
+        [
+            html.Div("Time Series", className="card-title"),
+            dcc.Graph(
+                id="time-series-graph",
+                figure=empty_figure("Run a simulation to see time-series"),
+                style={"height": "360px"},
+                config={"displayModeBar": False},
+            ),
+        ],
+        className="card time-series-card",
+        body=False,
     )
 
+
+def _tabs_section() -> dbc.Card:
     heatmap_controls = dbc.Row(
         [
             dbc.Col(
@@ -292,9 +299,9 @@ def _tabs_section() -> dbc.Card:
     return dbc.Card(
         [
             dbc.Tabs(
-                [time_series_tab, heatmap_tab, scenario_tab],
+                [heatmap_tab, scenario_tab],
                 id="tabs",
-                active_tab="tab-ts",
+                active_tab="tab-heatmap",
             ),
         ],
         className="card",
@@ -338,10 +345,17 @@ app.layout = html.Div(
         ),
         dbc.Row(
             [
-                dbc.Col(_input_panel(), md=4, sm=12),
-                dbc.Col(_summary_panel(), md=8, sm=12),
+                dbc.Col(_input_panel(), md=4, sm=12, className="left-col"),
+                dbc.Col(
+                    html.Div(
+                        [_summary_panel(), _time_series_card()],
+                        className="right-col",
+                    ),
+                    md=8,
+                    sm=12,
+                ),
             ],
-            className="g-3",
+            className="g-3 align-items-stretch",
         ),
         _tabs_section(),
         _export_row(),
