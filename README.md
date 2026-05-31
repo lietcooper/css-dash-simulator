@@ -80,7 +80,3 @@ ccs-dash-demo/
 └── assets/
     └── style.css           Custom styling
 ```
-
-## Interview Note
-
-This demo focuses on the software workflow rather than scientific accuracy. The simulator is intentionally simplified — the value of the project is showing how validated inputs flow through a structured Python simulation, get post-processed with NumPy and pandas, and reach the user as interactive Plotly visualizations inside a deployable Dash app.
