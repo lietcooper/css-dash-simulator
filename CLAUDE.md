@@ -1,7 +1,3 @@
-下面是一份可以直接给 coding agent 的 **Dash + Plotly CCS Simulation Dashboard Demo 开发计划**。目标是做一个适合面试展示的 lightweight demo，不追求真实 CCS 物理精度，而是展示你理解了 **input configuration → backend simulation workflow → post-processing → interactive visualization → deployment**。
-
----
-
 # Dash + Plotly CCS Simulation Dashboard Demo Plan
 
 ## 1. Demo 目标
